@@ -33,7 +33,10 @@ document.addEventListener('DOMContentLoaded', ()=>{
     let allSquares = box.children;
     let squareArray = Array.from(allSquares);
     squareArray.forEach(function(element, index){
-
+        //6: Changes the color of the square when hovering over it , i dont know if you wanted a back to normal color when not hovering so i didnt add that.
+        element.addEventListener('mouseover', e => {
+            element.style.backgroundColor = getRandomColor();
+                });
         
         var dx = SPEED * (Math.random()*2 -1);
         var dy = SPEED * (Math.random()*2 -1);
